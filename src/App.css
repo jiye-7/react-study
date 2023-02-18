@@ -9,10 +9,30 @@
   background-color: #ebebeb;
   box-shadow: 5px 5px 20px gray;
   border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.avatar {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: auto;
 }
 
 .photo {
   width: 200px;
   height: 200px;
   border-radius: 100%;
+}
+
+.new-employee {
+  position: absolute;
+  left: 68%;
+  top: 3%;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #92fddd;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.3rem;
 }

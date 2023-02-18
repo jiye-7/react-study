@@ -1,12 +1,12 @@
 import React from 'react';
-import ProfileImg from '../images/profile-img.png';
+import Avatar from './Avatar';
 
-export default function Profile() {
+export default function Profile({ name, title, image, isNewEmployee }) {
   return (
     <div className='profile'>
-      <img className='photo' src={ProfileImg} alt='test' />
-      <h1>James Kim</h1>
-      <p>Front Developer</p>
+      {isNewEmployee && <Avatar image={image} isNewEmployee={isNewEmployee} />}
+      <h1>{name}</h1>
+      <p>{title}</p>
     </div>
   );
 }
