@@ -12,18 +12,12 @@ export default function Products() {
   const handleChange = () => setChecked((checked) => !checked);
 
   useEffect(() => {
-    fetch('/data/products.json')
+    fetch(`/data/${checked ? 'sale_' : ''}products.json`)
       .then((res) => res.json())
       .then((data) => {
         console.log('네트워크에서 데이터를 받아옴');
         setProducts(data);
       });
-
-    if (checked) {
-      fetch('/data/sale_products.json')
-        .then((res) => res.json())
-        .then((data) => setProducts(data));
-    }
 
     return () => {
       console.log('🧹🧹🧹🧹🧹🧹🧹');
