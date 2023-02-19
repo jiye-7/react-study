@@ -7,8 +7,13 @@ import ProfileImg2 from './images/profile-img2.png';
 import ProfileImg3 from './images/profile-img3.png';
 
 function AppProfile() {
+  const handleClick = (e) => {
+    console.log(e);
+    alert('버튼 클릭 됨');
+  };
   return (
     <>
+      <button onClick={handleClick}>버튼</button>
       <Avatar image={ProfileImg1} isNewEmployee={true} />
       <Profile
         image={ProfileImg1}

@@ -2,6 +2,8 @@
   color: orange;
 }
 
+/* Profile Example */
+
 .profile {
   width: 300px;
   text-align: center;
@@ -35,4 +37,41 @@
   background-color: #92fddd;
   padding: 0.3rem 0.5rem;
   border-radius: 0.3rem;
+}
+
+/* Counter Example */
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+  padding: 1rem 3rem;
+  border: solid 2px gold;
+  border-radius: 1rem;
+}
+
+.counter:hover {
+  background-color: rgb(246, 243, 197);
+}
+
+.number {
+  font-size: 4rem;
+}
+
+.button {
+  font-size: 2rem;
+  padding: 0.2rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background: gold;
+  background: linear-gradient(
+    90deg,
+    rgba(215, 127, 12, 1) 0%,
+    rgba(253, 220, 29, 1) 100%
+  );
 }
