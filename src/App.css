@@ -41,7 +41,10 @@
 
 /* Counter Example */
 .container {
+  height: 100vh;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
@@ -50,7 +53,7 @@
   flex-direction: column;
   align-items: center;
   margin: 2rem;
-  padding: 1rem 3rem;
+  padding: 1rem 5rem;
   border: solid 2px gold;
   border-radius: 1rem;
 }
@@ -59,12 +62,18 @@
   background-color: rgb(246, 243, 197);
 }
 
+.total-count {
+  font-size: 0.8rem;
+  margin-left: 1rem;
+}
+
 .number {
   font-size: 4rem;
+  margin: 3rem 0rem;
 }
 
 .button {
-  font-size: 2rem;
+  font-size: 1rem;
   padding: 0.2rem 1rem;
   border-radius: 0.5rem;
   cursor: pointer;
@@ -74,4 +83,10 @@
     rgba(215, 127, 12, 1) 0%,
     rgba(253, 220, 29, 1) 100%
   );
+}
+
+.banner {
+  text-align: center;
+  width: 50%;
+  background-color: #fbc02d;
 }

@@ -1,29 +1,19 @@
 import React, { useState } from 'react';
 
-export default function Counter() {
+export default function Counter({ total, onClick }) {
   const [count, setCount] = useState(0);
 
   return (
     <div className='counter'>
-      <span className='number'>{count}</span>
+      <p className='number'>
+        {count}
+        <span className='total-count'>/{total}</span>
+      </p>
       <button
         className='button'
         onClick={() => {
           setCount((prev) => prev + 1);
-          /* 
-          closer, snapshot된 외부 값을 가지고 계산
-          setCount(count + 1);
-          setCount(count + 1);
-          setCount(count + 1);
-          setCount(count + 1);
-          setCount(count + 1); */
-          /* 
-          이전 상태값을 토대로 계산
-          setCount((prev) => prev + 1);
-          setCount((prev) => prev + 1);
-          setCount((prev) => prev + 1);
-          setCount((prev) => prev + 1);
-          setCount((prev) => prev + 1); */
+          onClick();
         }}
       >
         Add +
