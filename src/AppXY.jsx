@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './AppXY.css';
 
 export default function AppXY() {
@@ -10,20 +10,17 @@ export default function AppXY() {
   const [clientX, setClientX] = useState(0);
   const [clientY, setClientY] = useState(0);
 
-  const handleMouseMove = ({ nativeEvent }) => {
-    console.log(nativeEvent.clientX, nativeEvent.clientY);
-    setClientX(nativeEvent.clientX);
-    setClientY(nativeEvent.clientY);
-  };
-
   return (
-    <div className='container' onPointerMove={(e) => handleMouseMove(e)}>
+    <div
+      className='container'
+      onPointerMove={(e) => {
+        setClientX(e.clientX);
+        setClientY(e.clientY);
+      }}
+    >
       <div
         className='pointer'
-        style={{
-          left: clientX,
-          top: clientY,
-        }}
+        style={{ transform: `translate(${clientX}px, ${clientY}px)` }}
       ></div>
     </div>
   );
