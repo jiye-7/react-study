@@ -37,7 +37,7 @@ export default function AppMentorsButton() {
       </ul>
       <Button text='멘토 이름 바꾸기' onClick={handleUpdate} />
       <Button text='삭제하기' onClick={handleDelete} />
-      <Button text='멘토 추가하기' onClick={handleAdd}></Button>
+      <Button text='멘토 추가하기' onClick={handleAdd} />
     </div>
   );
 }
